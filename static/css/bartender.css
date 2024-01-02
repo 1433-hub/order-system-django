@@ -1,0 +1,25 @@
+
+
+.button-order-now{
+    padding: 5px 15px;
+    border-radius: 14px;
+    border: none;
+    background-color: #19303E;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.button-order-now:hover{
+    background-color: #BC8D4B;
+    color: black;
+}
+
+
+.blockage {
+    position: relative;
+} 
+.button-order-now {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }

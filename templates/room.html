@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Room {% endblock title%}   
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/room.css' %}">
+      <!-- TOP IMAGE HEADER -->
+      <section class="topSingleBkg topPageBkg">
+         <div class="item-content-bkg">
+            <div class="item-img"  style="background-image:url({% static 'image/banner/home-banner-1.webp' %});" ></div>
+            <div class="inner-desc">
+               <h1 class="post-title single-post-title">Book Your Room</h1>
+               <span class="post-subtitle"> We accept reservation. Call us or complete the form below</span>
+            </div>
+         </div>
+      </section>
+      <!-- /TOP IMAGE HEADER -->
+      
+      <!-- MAIN WRAP CONTENT -->
+      <section id="wrap-content" class="page-content">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-10 offset-md-1">
+               
+                  <div class="page-holder custom-page-template">
+                     <div class="categ-name">
+                        <h2>Room Number</h2>
+                     </div>
+                     </div>
+                  
+                  <div class="reservation_txt">
+                     <form action="{% url 'order-check' juice.pk %}" method="get">
+                       
+                       {% csrf_token %}
+                        <p> <textarea name="message" id="message2" class="reservation-fields" cols="10" rows="1" tabindex="4" size="30"></textarea></p>
+                        <!-- <p class="antispam">Leave this empty: <input type="text" name="url" /></p> -->
+                        <p class="alignc"><input type="submit" name="submit" value="Place Order" id="submit" /></p>
+                        
+                     </form>
+                  </div>
+               </div>
+               <!--col-md-10-->
+            </div>
+            <!--row-->
+         </div>
+         <!--container-->
+      </section>
+      <!-- /MAIN WRAP CONTENT -->
+ {% endblock content %}

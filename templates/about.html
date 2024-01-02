@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}   
+{% block title %} About {% endblock title %}
+
+{% block content %}
+<style>
+    .about1{
+        height: 900;
+        width: 500;
+    }
+</style>
+<section class="topSingleBkg topPageBkg">
+    <div class="item-content-bkg">
+        <div class="item-img"  style="background-image:url('{% static 'image/banner/banner-home-1.webp' %}');" ></div>
+        <div class="inner-desc">
+            <h1 class="post-title single-post-title">About Us</h1>
+            <span class="post-subtitle">In the lap of nature, feel yourself slip into a more tranquil state of mind. </span>
+        </div>
+    </div>
+</section>
+<!-- SECTION 1 -->     	
+<section class="about-1 margin-b72">
+    <div class="container">
+        <div class="row margin-b54">
+            <div class="col-md-6 mobile-margin-b32">
+                <img class="img-fluid img-feature about1" src="{% static 'image/about/about-1.webp' %}" loading="lazy" alt="about 1"  height="900"/>
+            </div>
+            <!-- /col-md-6 -->
+            <div class="col-md-6">
+                <div class="headline">
+                    <h2>Magnificient
+                        Views</h2>
+                </div>
+                <p>
+                    
+                      Temple Tree comprises two storey individual cottages, finished in hand-cut stone and featuring beautifully-decorated timber struts and pillars.
+                      Each room has a private balcony with pergola looking on to a lush garden centered on an ancient tree formed from three interlocking trunks. This tree is believed to be inhabited by local deities and continues to be ritually offered 
+                      flowers and perfumes to this day.
+                        <br>
+                        <br>
+                        The resort is ideally located right at the centre of the Lakeside in an area called Gaurighat, the only stretch of the Lakeside enjoying a full view of the lake as well as the Himalayas.
+
+                     We are a short stroll from specialty restaurants, fine handicraft and trekking equipment shops, Mountain bikes or boat rentals and convenience stores. Major banking facilities including ATMs are also within easy reach.
+                    </p>
+            </div>
+            <!-- /col-md-6 --> 
+        </div>
+        
+    </div>
+    <!-- /container-->
+</section>
+<!-- /SECTION 1 -->  
+<!-- SECTION 2 -->   
+<!-- Add parallax class to a section and a background image to create the parallax effect -->      
+<section class="home-widget parallax margin-b72"  style="background-image:url('{% static 'image/banner/banner-home-1.webp' %}');" >
+    <div class="parallax-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 alignc">
+                    <h4 class="about-stats-nb">10</h4>
+                    <h3 class="about-stats-title">High Restaurants</h3>
+                </div>
+                
+                <!--.col-md-4-->
+                <div class="col-md-6 alignc">
+                    <h4 class="about-stats-nb">150</h4>
+                    <h3 class="about-stats-title">Talented Employees</h3>
+                </div>
+                <!--.col-md-4-->
+            </div>
+            <!--.row-->
+        </div>
+        <!--.container-->
+    </div>
+    <!-- parallax-content -->     
+</section>
+<!-- /SECTION 2 -->     
+
+{% endblock content %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Bartender
+{% endblock title %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/bartender.css' %}">
+
+<section class="topSingleBkg topPageBkg">
+    <div class="item-content-bkg">
+        <div class="item-img"  style="background-image:url('{% static 'image/banner/home-new-1.webp' %}');" ></div>
+        <div class="inner-desc">
+            <h1 class="post-title single-post-title">Menu</h1>
+            <span class="post-subtitle"> Enjoy one of our delicious plates</span>
+        </div>
+    </div>
+</section>
+
+<section class="menu-3colgrid-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- FOOD MENU -->
+                <div class="categ-box">
+                    <div class="categ-name starters">
+                        <h2>MOCKTAILS</h2>
+                    </div>
+                    
+                        <div class="row" style="margin-bottom: 100px;">
+                            {% for juice in juice %}
+                            <div class="col-md-4 justify-content-center align-items-center" style="margin-top: 25px;" >
+                                <div class="container text-center">
+                                    <img src="{{ juice.image.url }}" alt="Rounded Image" class="rounded-circle" height="150" width="150"/>
+                                    </div>
+                                    <p class="text-center" style="font-size: 18px; padding-top: 10px; font-weight: bold;">{{ juice.juice_name }}</p>
+                                    <div class="text-center">
+                                        {% for ing in juice.juices.all %}
+                                            {{ ing }}/
+                                        {% endfor %} 
+                                    </div>
+                                    <div class="menu-price-v2 blockage">
+                                        <a class="button-order-now" href="{% url 'room' juice.id %}">Order</a>
+                                    </div>
+                                    
+                                    
+                            </div>
+                        {% endfor %}
+                        
+                        </div>
+                        
+                    
+                    
+                </div>
+                <!--/FOOD MENU-->
+            </div>
+            <!--col-md-12-->
+        </div>
+        <!--row-->
+    </div>
+    <!--container-->
+</section>
+{% endblock content %}

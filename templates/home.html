@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block content %}
+<div class="slider-container">
+    <div class="owl-carousel owl-theme home-slider">
+        <div class="slider-post slider-item-box-bkg">
+            <div class="slider-img" style="background-image:url('{% static 'image/banner/banner-home-1.webp' %}');"></div>
+            <div class="slider-caption">
+                <div class="slider-text">
+                    <h2 style="color: white;">Majestic Experience in Pokhara</h2>
+                    <!-- <p style="font-size: 24px;"></p> -->
+                    <!-- <p> <a href="{% url 'bartender' %}" class="view-more more-white">Order Now</a></p> -->
+                </div>
+            </div>
+            
+            <!--slider-caption-->
+        </div>
+        <!--slider-post-->
+    </div>
+</div>
+{% endblock content %}
